@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+// Default Njord Colors
+$primary50:     #e9f1f3 !default;
+$primary100:    #ccdcde !default;
+$primary200:    #aec4c7 !default;
+$primary300:    #8eabb0 !default;
+$primary400:    #76989e !default;
+$primary500:    #5e868d !default;
+$primary600:    #52767c !default;
+$primary700:    #436267 !default;
+$primary800:    #364e53 !default;
+$primary900:    #25393c !default;
+
+$secondary50:   #e5f3f0 !default;
+$secondary100:  #c0e0d9 !default;
+$secondary200:  #9bcec1 !default;
+$secondary300:  #7bb9a9 !default;
+$secondary400:  #6aaa98 !default;
+$secondary500:  #619a88 !default;
+$secondary600:  #5a8d7c !default;
+$secondary700:  #527c6e !default;
+$secondary800:  #4b6c60 !default;
+$secondary900:  #3f4f48 !default;
+
+
+$colors: (
+  "primary50":  $primary50,
+  "primary100": $primary100,
+  "primary200": $primary200,
+  "primary300": $primary300,
+  "primary400": $primary400,
+  "primary500": $primary500,
+  "primary600": $primary600,
+  "primary700": $primary700,
+  "primary800": $primary800,
+  "primary900": $primary900,
+
+  "secondary50":  $secondary50,
+  "secondary100": $secondary100,
+  "secondary200": $secondary200,
+  "secondary300": $secondary300,
+  "secondary400": $secondary400,
+  "secondary500": $secondary500,
+  "secondary600": $secondary600,
+  "secondary700": $secondary700,
+  "secondary800": $secondary800,
+  "secondary900": $secondary900
+  );
+
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color !important;
+    }
+  }
