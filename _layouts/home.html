@@ -4,21 +4,37 @@ layout: default
 
 {%- include header.html -%}
 <div class="home">
-  <!-- DWM section -->
+  <!-- Workflow section -->
   <section id="dwm">
     <div class="card mb-10 mx-2">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img class="card-img" src="..." alt="">
+          <img class="card-img" src="{{ "/assets/images/default/workspace.png" |
+          absolute_url }}" alt="Imagem do workspace">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">DWM</h5>
-            <p class="card-text">DWM(Dynamic Window Manager) é um Tiling 
-            Window Manager criado pelo time de desenvolvimento Suckless que
-            tem como pontos fortes a pouca quantidade de código 
-            fonte(1000 linhas em sua versão original), a extensibilidade a 
-            partir da linguagem C e sua leveza.</p>
+            <h5 class="card-title">Workflow</h5>
+              <p class="card-text">O workflow é um conjunto de ferramentas
+              primariamente criadas pelo time de desenvolvimento Suckless que
+              têm como principal objetivo a simplicidade de código. As
+              ferramentas que estão atualmente sendo utilizadas em meu workflow
+              são o DWM, o dmenu, o slstatus e o slock.
+              </p>
+              <p class="card-text">DWM(Dynamic Window Manager) é um Tiling 
+              Window Manager que tem como pontos fortes a pouca quantidade 
+              de código fonte(1000 linhas em sua versão original), a
+              extensibilidade a partir da linguagem C e sua leveza.</p>
+              <p class="card-text">O dmenu é um wrapper de entrada e saída que
+              pode também ser utilizado como um application launcher em muitos
+              Window Managers minimalistas.
+              </p>
+              <p class="card-text">O slstatus é um conjunto de funções que
+              podem ser utilizadas para customizar a barra de status do 
+              DWM.</p>
+              <p class="card-text">O slock é um bloqueador de tela
+              minimalista que tenta otimizar a quantidade de recursos
+              utilizados pelo sistema durante longos períodos de tempo.</p>
           </div>
         </div>
       </div>
@@ -31,31 +47,14 @@ layout: default
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">ST</h5>
-            <p class="card-text">ST(Simple Terminal) é um emulador de terminal
-            vindo do projeto Suckless que da mesma forma que o DWM foi 
-            pensado visando a simplicidade e extensibilidade.</p>
+              <p class="card-text">ST(Simple Terminal) é um emulador de
+              terminal vindo do projeto Suckless que da mesma forma que o 
+              DWM foi pensado visando a simplicidade e extensibilidade.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <img class="card-img" src="..." alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- DMENU section -->
-  <section id="dmenu">
-    <div class="card mb-10 mx-2">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img class="card-img" src="..." alt="">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">DMENU</h5>
-            <p class="card-text">Dmenu é um manipulador de entrada e saída
-            criado com o propósito de servir como um lançador de aplicativos
-            para Tiling Window Managers</p>
-          </div>
+          <img class="card-img" src="{{ "/assets/images/default/st.png" |
+          absolute_url }}" alt="Imagem do ST">
         </div>
       </div>
     </div>
@@ -64,50 +63,26 @@ layout: default
   <section id="sobre">
     <div class="card mb-10 mx-2">
       <div class="row no-gutters">
+        <div class="col-md-4">
+          <img class="card-img" src="{{ "/assets/images/default/perfil1.png" |
+          absolute_url }}" alt="Foto de Perfil do Criador">
+        </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Sobre Mim</h5>
             <p class="card-text">Sou um estudante de Ciências de Computação da
-            Universidade Federal de São Carlos(UFSCar)</p>
+            Universidade Federal de São Carlos(UFSCar), interessado em
+            engenharia reversa, análise de vulnerabilidades e inteligência
+            artificial. </p>
+            <p class="card-text">Atualmente estudo sobre exploração binária e
+            otimização de código, também sou entusiasta de Linux, Haskell e
+            programação funcional.
+            </p>
           </div>
-        </div>
-        <div class="col-md-4">
-          <img class="card-img" src="..." alt="">
         </div>
       </div>
     </div>
   </section>
-
-
-
-  <!-- Default version -->
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-  
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
 </div>
+
+{% include footer.html %}
