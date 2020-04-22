@@ -1,0 +1,13 @@
+#!/bin/env sh
+
+prefix_dir='../_posts/'
+title=$*
+title_stripped=$(echo "$*" | sed 's/ /-/g; s/.*/\L&/')
+cat > "$prefix_dir$(date +'%Y-%m-%d')-$title_stripped.md" << EOF
+---
+layout: post 
+title: "$title"
+date: "$(date +'%Y-%m-%m %T %z')"
+categories:
+---
+EOF
