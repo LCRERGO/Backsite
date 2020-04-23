@@ -4,3 +4,9 @@
 
 //@import "minima";
 @import "njord";
+
+#main-header {
+  background-image: url("{{ "/assets/images/default/montains.jpg" | absolute_url }}");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

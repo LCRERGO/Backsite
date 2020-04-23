@@ -25,31 +25,31 @@ $secondary900:  #3f4f48 !default;
 
 
 $colors: (
-  "primary50":  $primary50,
-  "primary100": $primary100,
-  "primary200": $primary200,
-  "primary300": $primary300,
-  "primary400": $primary400,
-  "primary500": $primary500,
-  "primary600": $primary600,
-  "primary700": $primary700,
-  "primary800": $primary800,
-  "primary900": $primary900,
+"primary50":  $primary50,
+"primary100": $primary100,
+"primary200": $primary200,
+"primary300": $primary300,
+"primary400": $primary400,
+"primary500": $primary500,
+"primary600": $primary600,
+"primary700": $primary700,
+"primary800": $primary800,
+"primary900": $primary900,
 
-  "secondary50":  $secondary50,
-  "secondary100": $secondary100,
-  "secondary200": $secondary200,
-  "secondary300": $secondary300,
-  "secondary400": $secondary400,
-  "secondary500": $secondary500,
-  "secondary600": $secondary600,
-  "secondary700": $secondary700,
-  "secondary800": $secondary800,
-  "secondary900": $secondary900
-  );
+"secondary50":  $secondary50,
+"secondary100": $secondary100,
+"secondary200": $secondary200,
+"secondary300": $secondary300,
+"secondary400": $secondary400,
+"secondary500": $secondary500,
+"secondary600": $secondary600,
+"secondary700": $secondary700,
+"secondary800": $secondary800,
+"secondary900": $secondary900
+);
 
-  @each $name, $color in $colors {
-    .bg-#{$name} {
-      background-color: $color !important;
-    }
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
   }
+}
