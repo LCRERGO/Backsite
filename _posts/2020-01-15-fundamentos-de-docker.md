@@ -22,7 +22,7 @@ criados a partir de imagens e imagens são agrupadas em registros, sendo o mais
 famoso deles o [Docker Hub](https://hub.docker.com). Então tudo o que é preciso
 para utilizar o docker é pegar uma imagem como base, encapsular a aplicação em
 um Dockerfile e lançar containers.
-![Docker Environment](/assets/images/docker_env.png)
+![Docker Environment](/assets/img/posts/docker_env.png)
 
 # Hello World
 Bom, para experimentar o Docker vamos criar um simples web server capaz de

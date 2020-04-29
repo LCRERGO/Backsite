@@ -1,35 +1,44 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# SITE CONFIGURATION
+baseurl: ""
+url: ""
 
-title: Njord Combinator
+# THEME-SPECIFIC CONFIGURATION
+title: Njord Combinator                                 # site's title
 email: lcr.ergo@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+twitter_username: lcrergo
+github_username: lcrergo
+lang: pt-BR
+description: >-   
     Esse web site foi criado como uma forma de agrupar os interesses do autor 
     e servir como uma fonte de referência futura para estudos.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: lcrergo
-github_username:  lcrergo
-lang: pt-BR
+avatar: assets/img/NjordLogo.png                         # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
 
-# Overriding defaults
+# Header and footer text
+header_text: Norse Development Style 
+header_feature_image: assets/img/montains.jpg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+katex: true                                             # Enable if using math markup
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+disqus_shortname:                                       # Your discus shortname for comments
+layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons:                                           # In _data/social.yml
+share_buttons:                                          # In _data/social.yml
+authors:                                                # In _data/authors.yml
+language:                                               # In _data/language.yml
+
+# PAGINATION
+paginate: 7
+paginate_path: "/blog/page:num"
+
 defaults:
     -
         scope:
@@ -39,27 +48,21 @@ defaults:
             permalink: /:title:output_ext
             author: "Lucas Cruz dos Reis"
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github

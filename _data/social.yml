@@ -1,0 +1,36 @@
+# Icons on the footer
+rss: true        
+email_address:    # Full email address, e.g. "sam@example.com"
+behance:
+bitbucket:
+dribbble:
+facebook:
+flickr:
+gitlab:
+github: "LCRERGO"
+instagram:
+keybase:
+linkedin: "https://www.linkedin.com/in/lucas-cruz-dos-reis-545016177/"         # Full URL
+pinterest:
+reddit:
+soundcloud:
+stack_overflow:
+stack_exchange:   # Full URL
+steam:
+tumblr:
+twitter:          # "twitter username"
+vimeo:
+wordpress:
+youtube:          # Youtube channel token like: UCqECaJ8Gagnn7YCbPEzWH6g
+
+# Share button options
+share:
+  facebook: true
+  twitter: true
+  tumblr:
+  pinterest:
+  pocket:
+  reddit: true
+  linkedin: true
+  wordpress:
+  email: true
