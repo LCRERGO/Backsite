@@ -40,7 +40,7 @@ defaults:
             author: "Lucas Cruz dos Reis"
 
 # Build settings
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
